@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="1215.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.scene.MenuEditTariffController">
+   <children>
+      <AnchorPane layoutY="106.0" prefHeight="480.0" prefWidth="1215.0" style="-fx-background-color: #FAFAFA;">
+         <children>
+            <Button fx:id="ExitButton" layoutX="1017.0" layoutY="433.0" mnemonicParsing="false" onAction="#exit" prefHeight="36.0" prefWidth="182.0" style="-fx-background-color: #F39c63; -fx-background-radius: 5;" text="Exit">
+               <font>
+                  <Font name="Tw Cen MT Italic" size="21.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tariffTable" editable="true" layoutX="3.0" layoutY="14.0" prefHeight="222.0" prefWidth="1209.0" style="-fx-background-color: #2E3348;">
+               <columns>
+                  <TableColumn fx:id="nameTariff" maxWidth="595.0" minWidth="69.0" prefWidth="89.0" text="Name" />
+                  <TableColumn fx:id="priceTariff" prefWidth="67.0" text="Sub. Price" />
+                  <TableColumn fx:id="callMinutes" prefWidth="81.0" text="Сall minutes" />
+                  <TableColumn fx:id="callMinOtherOperator" prefWidth="140.0" text="Call minutes(Other operator)" />
+                  <TableColumn fx:id="sms" prefWidth="62.0" resizable="false" text="SMS" />
+                  <TableColumn fx:id="mb" minWidth="4.0" prefWidth="59.0" resizable="false" text="MB" />
+                  <TableColumn fx:id="priceExMin" prefWidth="123.0" resizable="false" text="Price ex. minutes" />
+                  <TableColumn fx:id="priceExSMS" prefWidth="122.0" resizable="false" text="Price ex. SMS" />
+                  <TableColumn fx:id="priceEx100MB" prefWidth="123.0" resizable="false" text="Price ex. 100MB" />
+                  <TableColumn fx:id="specialCondition" minWidth="50.0" prefWidth="600.0" text="Special Condition                                    " />
+               </columns>
+            </TableView>
+            <Button fx:id="ShowTariffsButton" contentDisplay="TOP" defaultButton="true" graphicTextGap="0.0" layoutX="1018.0" layoutY="386.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#showTairffs" prefHeight="36.0" prefWidth="182.0" style="-fx-background-color: #F39c63; -fx-background-radius: 5;" text="Show tariffs" textAlignment="JUSTIFY" textOverrun="CLIP">
+               <font>
+                  <Font name="Tw Cen MT Italic" size="21.0" />
+               </font>
+            </Button>
+            <TextField fx:id="fieldMinSF" layoutX="150.0" layoutY="248.0" />
+            <Label layoutX="14.0" layoutY="248.0" prefHeight="27.0" prefWidth="143.0" text="Min subscriber fee">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="277.0" prefHeight="27.0" prefWidth="143.0" text="Max subscriber fee">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fieldMaxSF" layoutX="150.0" layoutY="279.0" />
+            <Label layoutX="14.0" layoutY="308.0" prefHeight="27.0" prefWidth="143.0" text="Min number of SMS">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="minNumberSMS" layoutX="150.0" layoutY="310.0" />
+            <Label layoutX="14.0" layoutY="344.0" prefHeight="27.0" prefWidth="143.0" text="Min call minutes">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="minMinutes" layoutX="150.0" layoutY="344.0" />
+            <Label layoutX="14.0" layoutY="366.0" prefHeight="64.0" prefWidth="143.0" text="Min call minutes other operator" wrapText="true">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="minMinutesOtherOperator" layoutX="151.0" layoutY="384.0" />
+            <Label layoutX="14.0" layoutY="422.0" prefHeight="27.0" prefWidth="143.0" text="Min mobile data(MB)">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="minMobileDate" layoutX="150.0" layoutY="424.0" />
+            <Label fx:id="errorLabel" layoutX="368.0" layoutY="381.0" prefHeight="64.0" prefWidth="374.0" textFill="RED">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="succeedLabel" layoutX="348.0" layoutY="261.0" prefHeight="37.0" prefWidth="374.0" textFill="#12ff00">
+               <font>
+                  <Font name="Tw Cen MT Condensed Bold" size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="AddButton" contentDisplay="TOP" defaultButton="true" graphicTextGap="0.0" layoutX="1018.0" layoutY="246.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#addTariff" prefHeight="36.0" prefWidth="182.0" style="-fx-background-color: #F39c63; -fx-background-radius: 5;" text="Add " textAlignment="JUSTIFY" textOverrun="CLIP">
+               <font>
+                  <Font name="Tw Cen MT Italic" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="EditButton" contentDisplay="TOP" defaultButton="true" graphicTextGap="0.0" layoutX="1018.0" layoutY="295.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#editTariff" prefHeight="36.0" prefWidth="182.0" style="-fx-background-color: #F39c63; -fx-background-radius: 5;" text="Edit " textAlignment="JUSTIFY" textOverrun="CLIP">
+               <font>
+                  <Font name="Tw Cen MT Italic" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="DeleteButton" contentDisplay="TOP" defaultButton="true" graphicTextGap="0.0" layoutX="1018.0" layoutY="341.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#deleteTariff" prefHeight="36.0" prefWidth="182.0" style="-fx-background-color: #F39c63; -fx-background-radius: 5;" text="Delete " textAlignment="JUSTIFY" textOverrun="CLIP">
+               <font>
+                  <Font name="Tw Cen MT Italic" size="21.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="226.0" layoutY="14.0" prefHeight="50.0" prefWidth="396.0" text="List tariff" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font name="Tw Cen MT Italic" size="57.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

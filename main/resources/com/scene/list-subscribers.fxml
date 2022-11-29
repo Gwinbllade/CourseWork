@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="1215.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.scene.SubscribersListController">
+   <children>
+      <AnchorPane layoutY="106.0" prefHeight="481.0" prefWidth="1215.0" style="-fx-background-color: #FAFAFA;">
+         <children>
+            <Button fx:id="exitButton" layoutX="1019.0" layoutY="417.0" mnemonicParsing="false" onAction="#exit" prefHeight="0.0" prefWidth="182.0" style="-fx-background-color: #F39c63; -fx-background-radius: 5;" text="Exit">
+               <font>
+                  <Font name="Tw Cen MT Italic" size="21.0" />
+               </font>
+            </Button>
+            <Label fx:id="countSubscribersLabel" layoutX="26.0" layoutY="417.0" prefHeight="37.0" prefWidth="423.0" text="Count subscribers:">
+               <font>
+                  <Font name="Tw Cen MT Italic" size="25.0" />
+               </font>
+            </Label>
+            <TableView fx:id="subscriberTable" layoutX="6.0" layoutY="8.0" prefHeight="397.0" prefWidth="1200.0" style="-fx-background-color: #2E3348;">
+              <columns>
+                  <TableColumn fx:id="tariffName" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="-1.0" resizable="false" text="Tariff name" />
+                  <TableColumn fx:id="userID" prefWidth="63.0" text="SubID" />
+                  <TableColumn fx:id="clientSurname" prefWidth="238.0" text="Surname" />
+                  <TableColumn fx:id="clientName" minWidth="2.0" prefWidth="179.0" text="Name" />
+                  <TableColumn fx:id="clientPatronymic" prefWidth="215.0" text="Patronymic" />
+                  <TableColumn fx:id="clientPhone" minWidth="6.0" prefWidth="123.0" text="Phone number " />
+                  <TableColumn fx:id="tariffName" prefWidth="286.0" text="Tariff name" />
+                  <TableColumn fx:id="tariffID" prefWidth="94.0" sortType="DESCENDING" text="TariffID" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="226.0" layoutY="14.0" prefHeight="50.0" prefWidth="396.0" text="List subscribers" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font name="Tw Cen MT Italic" size="57.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
