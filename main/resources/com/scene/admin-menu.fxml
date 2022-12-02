@@ -24,7 +24,7 @@
                   <Font name="Tw Cen MT Italic" size="21.0" />
                </font>
             </Button>
-            <Button fx:id="EditTariff" layoutX="497.0" layoutY="129.0" mnemonicParsing="false" onAction="#editTariff" prefHeight="0.0" prefWidth="182.0" style="-fx-background-color: #F39c63; -fx-background-radius: 5;" text="Edit Tariff">
+            <Button fx:id="EditTariff" layoutX="497.0" layoutY="129.0" mnemonicParsing="false" onAction="#editTariff" prefHeight="0.0" prefWidth="182.0" style="-fx-background-color: #F39c63; -fx-background-radius: 5;" text="Edit tariff">
                <font>
                   <Font name="Tw Cen MT Italic" size="21.0" />
                </font>

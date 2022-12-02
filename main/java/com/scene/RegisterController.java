@@ -65,7 +65,7 @@ public class RegisterController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("log-in.fxml")));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
-        stage.setTitle("Log in");
+        stage.setTitle("Mobile company");
         stage.setScene(scene);
         stage.show();
     }

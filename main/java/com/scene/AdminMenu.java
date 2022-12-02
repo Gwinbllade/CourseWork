@@ -43,7 +43,7 @@ public class AdminMenu {
         controller.initialize(admin);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setTitle("Log in");
+        stage.setTitle("Mobile company");
         stage.setScene(scene);
         stage.show();
     }
@@ -54,7 +54,7 @@ public class AdminMenu {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("log-in.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setTitle("Log in");
+        stage.setTitle("Mobile company");
         stage.setScene(scene);
         stage.show();
     }
